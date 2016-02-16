@@ -1,0 +1,74 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "janakakbase"
+    ],
+    "contact": "janakaed@anl.gov",
+    "visible": true,
+    "categories": ["active"],
+    "widgets": {
+        "input": null,
+        "output": "null"
+    },
+    "parameters": [
+        {
+            "id": "pathwayAnalysis",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": true,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "valid_ws_types": [ "KBaseFBA.FBAPathwayAnalysis" ]
+            }
+        },
+        {
+            "id" : "output_PathwayAnalysisMultiple",
+            "optional" : false,
+            "advanced" : false,
+            "allow_multiple" : false,
+            "default_values" : [ "" ],
+            "field_type" : "text",
+            "text_options" : {
+            "valid_ws_types" : [ "KBaseFBA.FBAPathwayAnalysisMultiple" ],
+            "is_output_name":true
+            }
+         }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "exp_analysis_multiple",
+            "method": "exp_analysis_multiple",
+            "input_mapping": [
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_argument_position": "0"
+                },
+                {
+                    "input_parameter": "pathwayAnalysis",
+                    "target_argument_position": "1"
+                },
+                {
+                    "input_parameter": "output_PathwayAnalysisMultiple",
+                    "target_argument_position": "2"
+                }
+            ],
+            "output_mapping": [
+                {
+                  "constant_value": "KBaseFBA.FBAPathwayAnalysisMultiple",
+                  "target_property": "type"
+                },
+                {
+                  "input_parameter": "output_PathwayAnalysisMultiple",
+                  "target_property": "obj"
+                },
+                {
+                  "narrative_system_variable": "workspace",
+                  "target_property": "ws"
+                }
+              ]
+        }
+    },
+    "job_id_output_field": "docker"
+}
