@@ -3,7 +3,7 @@ A KBase module: exp_analysis_multiple
 This module compare multiple_pathway analysis_objects
 */
 
-module model_analysis_expession {
+module exp_analysis_multiple {
 	/*
 	A string representing a list of pathwayAnalysis.
 	*/

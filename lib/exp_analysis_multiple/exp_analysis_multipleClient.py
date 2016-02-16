@@ -103,7 +103,7 @@ class _JSONObjectEncoder(_json.JSONEncoder):
         return _json.JSONEncoder.default(self, obj)
 
 
-class model_analysis_expession(object):
+class exp_analysis_multiple(object):
 
     def __init__(self, url=None, timeout=30 * 60, user_id=None,
                  password=None, token=None, ignore_authrc=False,
@@ -174,7 +174,7 @@ class model_analysis_expession(object):
     def exp_analysis_multiple(self, workspace_name, pathwayAnalysis, output_PathwayAnalysisMultiple, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method exp_analysis_multiple: argument json_rpc_context is not type dict as required.')
-        resp = self._call('model_analysis_expession.exp_analysis_multiple',
+        resp = self._call('exp_analysis_multiple.exp_analysis_multiple',
                           [workspace_name, pathwayAnalysis, output_PathwayAnalysisMultiple], json_rpc_context)
         return resp[0]
  

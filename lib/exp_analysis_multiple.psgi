@@ -9,7 +9,7 @@ my @dispatch;
 
 {
     my $obj = exp_analysis_multiple::exp_analysis_multipleImpl->new;
-    push(@dispatch, 'model_analysis_expession' => $obj);
+    push(@dispatch, 'exp_analysis_multiple' => $obj);
 }
 
 

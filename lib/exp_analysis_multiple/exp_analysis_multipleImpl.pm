@@ -7,7 +7,7 @@ our $VERSION = "0.1.0";
 
 =head1 NAME
 
-model_analysis_expession
+exp_analysis_multiple
 
 =head1 DESCRIPTION
 
@@ -62,22 +62,22 @@ sub new
 =begin html
 
 <pre>
-$workspace_name is a model_analysis_expession.workspace_name
-$pathwayAnalysis is a model_analysis_expession.pathwayAnalysis
-$output_PathwayAnalysisMultiple is a model_analysis_expession.output_PathwayAnalysisMultiple
-$return is a model_analysis_expession.FBAPathwayAnalysisMultiple
+$workspace_name is an exp_analysis_multiple.workspace_name
+$pathwayAnalysis is an exp_analysis_multiple.pathwayAnalysis
+$output_PathwayAnalysisMultiple is an exp_analysis_multiple.output_PathwayAnalysisMultiple
+$return is an exp_analysis_multiple.FBAPathwayAnalysisMultiple
 workspace_name is a string
-pathwayAnalysis is a reference to a list where each element is a model_analysis_expession.pathwayAnalysis
+pathwayAnalysis is a reference to a list where each element is an exp_analysis_multiple.pathwayAnalysis
 output_PathwayAnalysisMultiple is a string
 FBAPathwayAnalysisMultiple is a reference to a hash where the following keys are defined:
 	pathwayType has a value which is a string
-	fbaexpression has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisPathwayMultiple
+	fbaexpression has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisPathwayMultiple
 FBAPathwayAnalysisPathwayMultiple is a reference to a hash where the following keys are defined:
-	expression_matrix_ref has a value which is a model_analysis_expession.expression_matrix_ref
+	expression_matrix_ref has a value which is an exp_analysis_multiple.expression_matrix_ref
 	expression_condition has a value which is a string
-	fbamodel_ref has a value which is a model_analysis_expession.fbamodel_ref
-	fba_ref has a value which is a model_analysis_expession.fba_ref
-	count_list has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisCounts
+	fbamodel_ref has a value which is an exp_analysis_multiple.fbamodel_ref
+	fba_ref has a value which is an exp_analysis_multiple.fba_ref
+	count_list has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisCounts
 expression_matrix_ref is a string
 fbamodel_ref is a string
 fba_ref is a string
@@ -100,22 +100,22 @@ FBAPathwayAnalysisCounts is a reference to a hash where the following keys are d
 
 =begin text
 
-$workspace_name is a model_analysis_expession.workspace_name
-$pathwayAnalysis is a model_analysis_expession.pathwayAnalysis
-$output_PathwayAnalysisMultiple is a model_analysis_expession.output_PathwayAnalysisMultiple
-$return is a model_analysis_expession.FBAPathwayAnalysisMultiple
+$workspace_name is an exp_analysis_multiple.workspace_name
+$pathwayAnalysis is an exp_analysis_multiple.pathwayAnalysis
+$output_PathwayAnalysisMultiple is an exp_analysis_multiple.output_PathwayAnalysisMultiple
+$return is an exp_analysis_multiple.FBAPathwayAnalysisMultiple
 workspace_name is a string
-pathwayAnalysis is a reference to a list where each element is a model_analysis_expession.pathwayAnalysis
+pathwayAnalysis is a reference to a list where each element is an exp_analysis_multiple.pathwayAnalysis
 output_PathwayAnalysisMultiple is a string
 FBAPathwayAnalysisMultiple is a reference to a hash where the following keys are defined:
 	pathwayType has a value which is a string
-	fbaexpression has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisPathwayMultiple
+	fbaexpression has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisPathwayMultiple
 FBAPathwayAnalysisPathwayMultiple is a reference to a hash where the following keys are defined:
-	expression_matrix_ref has a value which is a model_analysis_expession.expression_matrix_ref
+	expression_matrix_ref has a value which is an exp_analysis_multiple.expression_matrix_ref
 	expression_condition has a value which is a string
-	fbamodel_ref has a value which is a model_analysis_expession.fbamodel_ref
-	fba_ref has a value which is a model_analysis_expession.fba_ref
-	count_list has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisCounts
+	fbamodel_ref has a value which is an exp_analysis_multiple.fbamodel_ref
+	fba_ref has a value which is an exp_analysis_multiple.fba_ref
+	count_list has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisCounts
 expression_matrix_ref is a string
 fbamodel_ref is a string
 fba_ref is a string
@@ -412,14 +412,14 @@ a string
 =begin html
 
 <pre>
-a reference to a list where each element is a model_analysis_expession.pathwayAnalysis
+a reference to a list where each element is an exp_analysis_multiple.pathwayAnalysis
 </pre>
 
 =end html
 
 =begin text
 
-a reference to a list where each element is a model_analysis_expession.pathwayAnalysis
+a reference to a list where each element is an exp_analysis_multiple.pathwayAnalysis
 
 =end text
 
@@ -678,11 +678,11 @@ gpRxnsFluxP has a value which is an int
 
 <pre>
 a reference to a hash where the following keys are defined:
-expression_matrix_ref has a value which is a model_analysis_expession.expression_matrix_ref
+expression_matrix_ref has a value which is an exp_analysis_multiple.expression_matrix_ref
 expression_condition has a value which is a string
-fbamodel_ref has a value which is a model_analysis_expession.fbamodel_ref
-fba_ref has a value which is a model_analysis_expession.fba_ref
-count_list has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisCounts
+fbamodel_ref has a value which is an exp_analysis_multiple.fbamodel_ref
+fba_ref has a value which is an exp_analysis_multiple.fba_ref
+count_list has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisCounts
 
 </pre>
 
@@ -691,11 +691,11 @@ count_list has a value which is a reference to a list where each element is a mo
 =begin text
 
 a reference to a hash where the following keys are defined:
-expression_matrix_ref has a value which is a model_analysis_expession.expression_matrix_ref
+expression_matrix_ref has a value which is an exp_analysis_multiple.expression_matrix_ref
 expression_condition has a value which is a string
-fbamodel_ref has a value which is a model_analysis_expession.fbamodel_ref
-fba_ref has a value which is a model_analysis_expession.fba_ref
-count_list has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisCounts
+fbamodel_ref has a value which is an exp_analysis_multiple.fbamodel_ref
+fba_ref has a value which is an exp_analysis_multiple.fba_ref
+count_list has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisCounts
 
 
 =end text
@@ -717,7 +717,7 @@ count_list has a value which is a reference to a list where each element is a mo
 <pre>
 a reference to a hash where the following keys are defined:
 pathwayType has a value which is a string
-fbaexpression has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisPathwayMultiple
+fbaexpression has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisPathwayMultiple
 
 </pre>
 
@@ -727,7 +727,7 @@ fbaexpression has a value which is a reference to a list where each element is a
 
 a reference to a hash where the following keys are defined:
 pathwayType has a value which is a string
-fbaexpression has a value which is a reference to a list where each element is a model_analysis_expession.FBAPathwayAnalysisPathwayMultiple
+fbaexpression has a value which is a reference to a list where each element is an exp_analysis_multiple.FBAPathwayAnalysisPathwayMultiple
 
 
 =end text

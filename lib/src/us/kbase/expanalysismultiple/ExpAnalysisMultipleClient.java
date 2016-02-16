@@ -16,7 +16,7 @@ import us.kbase.common.service.UnauthorizedException;
  * <p>Original spec-file module name: exp_analysis_multiple</p>
  * <pre>
  * A KBase module: exp_analysis_multiple
- * This sample module contains one small method - count_contigs.
+ * This module compare multiple_pathway analysis_objects
  * </pre>
  */
 public class ExpAnalysisMultipleClient {
@@ -140,23 +140,23 @@ public class ExpAnalysisMultipleClient {
     }
 
     /**
-     * <p>Original spec-file function name: count_contigs</p>
+     * <p>Original spec-file function name: exp_analysis_multiple</p>
      * <pre>
-     * Count contigs in a ContigSet
-     * contigset_id - the ContigSet to count.
      * </pre>
      * @param   arg1   instance of original type "workspace_name" (A string representing a workspace name.)
-     * @param   arg2   instance of original type "contigset_id" (A string representing a ContigSet id.)
-     * @return   instance of type {@link us.kbase.expanalysismultiple.CountContigsResults CountContigsResults}
+     * @param   arg2   instance of original type "pathwayAnalysis" &rarr; list of original type "pathwayAnalysis" (A string representing a list of pathwayAnalysis.)
+     * @param   arg3   instance of original type "output_PathwayAnalysisMultiple" (A string representing a multiple pathwayAnalysis objects.)
+     * @return   instance of type {@link us.kbase.expanalysismultiple.FBAPathwayAnalysisMultiple FBAPathwayAnalysisMultiple}
      * @throws IOException if an IO exception occurs
      * @throws JsonClientException if a JSON RPC exception occurs
      */
-    public CountContigsResults countContigs(String arg1, String arg2, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
+    public FBAPathwayAnalysisMultiple expAnalysisMultiple(String arg1, List<String> arg2, String arg3, RpcContext... jsonRpcContext) throws IOException, JsonClientException {
         List<Object> args = new ArrayList<Object>();
         args.add(arg1);
         args.add(arg2);
-        TypeReference<List<CountContigsResults>> retType = new TypeReference<List<CountContigsResults>>() {};
-        List<CountContigsResults> res = caller.jsonrpcCall("exp_analysis_multiple.count_contigs", args, retType, true, true, jsonRpcContext);
+        args.add(arg3);
+        TypeReference<List<FBAPathwayAnalysisMultiple>> retType = new TypeReference<List<FBAPathwayAnalysisMultiple>>() {};
+        List<FBAPathwayAnalysisMultiple> res = caller.jsonrpcCall("exp_analysis_multiple.exp_analysis_multiple", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 }

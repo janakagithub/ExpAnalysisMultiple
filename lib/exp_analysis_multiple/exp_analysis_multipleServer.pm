@@ -45,11 +45,11 @@ our %sync_methods = (
 );
 
 our %async_run_methods = (
-        'exp_analysis_multiple_async' => 'model_analysis_expession.exp_analysis_multiple',
+        'exp_analysis_multiple_async' => 'exp_analysis_multiple.exp_analysis_multiple',
 );
 
 our %async_check_methods = (
-        'exp_analysis_multiple_check' => 'model_analysis_expession.exp_analysis_multiple',
+        'exp_analysis_multiple_check' => 'exp_analysis_multiple.exp_analysis_multiple',
 );
 
 sub _build_valid_methods
@@ -80,7 +80,7 @@ sub get_service_name
 {
     my ($self) = @_;
     if(!defined $ENV{$SERVICE}) {
-        return 'model_analysis_expession';
+        return 'exp_analysis_multiple';
     }
     return $ENV{$SERVICE};
 }
@@ -233,7 +233,7 @@ sub call_method {
     my $args = $data->{arguments};
 
 {
-    # Service model_analysis_expession requires authentication.
+    # Service exp_analysis_multiple requires authentication.
 
     my $method_auth = $method_authentication{$method};
     $ctx->authenticated(0);
@@ -247,7 +247,7 @@ sub call_method {
 
 	if (!$token && $method_auth eq 'required')
 	{
-	    $self->exception('PerlError', "Authentication required for model_analysis_expession but no authentication header was passed");
+	    $self->exception('PerlError', "Authentication required for exp_analysis_multiple but no authentication header was passed");
 	}
 
 	my $auth_token = Bio::KBase::AuthToken->new(token => $token, ignore_authrc => 1);
@@ -413,7 +413,7 @@ sub get_method
     if (!$self->valid_methods->{$method})
     {
 	$self->exception('NoSuchMethod',
-			 "'$method' is not a valid method in service model_analysis_expession.");
+			 "'$method' is not a valid method in service exp_analysis_multiple.");
     }
 	
     my $inst = $self->instance_dispatch->{$package};
@@ -858,7 +858,7 @@ unless (caller) {
     {
         use exp_analysis_multiple::exp_analysis_multipleImpl;
         my $obj = exp_analysis_multiple::exp_analysis_multipleImpl->new;
-        push(@dispatch, 'model_analysis_expession' => $obj);
+        push(@dispatch, 'exp_analysis_multiple' => $obj);
     }
     my %headers = (
         "Authorization" => $token,
