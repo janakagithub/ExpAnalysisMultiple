@@ -2,7 +2,7 @@ package exp_analysis_multiple::exp_analysis_multipleImpl;
 use strict;
 use Bio::KBase::Exceptions;
 # Use Semantic Versioning (2.0.0-rc.1)
-# http://semver.org 
+# http://semver.org
 our $VERSION = "0.1.0";
 
 =head1 NAME
@@ -313,7 +313,7 @@ sub exp_analysis_multiple
     my $meta = $wshandle->save_objects($saveObjectParams);
 
     print &Dumper ($expAnalysis);
-    $return = {'expAnalysis' => $expAnalysis};
+    $return = {'expAnalysis' => $meta};
 
 
 
@@ -332,7 +332,7 @@ sub exp_analysis_multiple
 
 
 
-=head2 version 
+=head2 version
 
   $return = $obj->version()
 
