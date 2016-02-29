@@ -5,7 +5,7 @@
     ],
     "contact": "janakaed@anl.gov",
     "visible": true,
-    "categories": ["active"],
+    "categories": ["active","expression"],
     "widgets": {
         "input": null,
         "output": "null"
